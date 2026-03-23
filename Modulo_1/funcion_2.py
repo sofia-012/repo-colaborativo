@@ -47,4 +47,43 @@ def  analizar_habitos(lista):
     return diccionario
         
         
+def registrar_habitos():
+    """
+    Esta función recibe distintas actividades ingresadas por el usuario, con un ciclo while que le pregunta 
+    al usuario si ya terminó de ingresar o decide agregar más actividades. Luego, guarda las actividades en una lista y las devuelve.
+    
+
+    Parameters
+    ----------
+    actividad : Actividades realizadas durante el día por el usuario
+
+    Returns
+    -------
+    actividades : Lista de actividades
+
+    """
+  
+    actividades= []
+    actividad= input("Ingrese una actividad que realizó durante el día: ")
+    actividades.append(actividad)
+    decision = input("¿Desea agregar mas actividades?: ")
+    while decision == "si":
+        actividad= input("Ingrese una actividad que realizó durante el día: ")
+        actividades.append(actividad)
+        decision = input("¿Desea agregar mas actividades?: ")
         
+    return actividades 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
